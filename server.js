@@ -12,27 +12,41 @@ const fakeDatabase = {
             uid: '1',
             name: 'Siân',
             email: 'sian@coffeeshop.com',
+            type: 'personal',
             password: 'redux',
             birthday: 'Close to mine',
             favDrink: 'Americano',
+            rewardPoints: 0,
             joined: new Date()
         },
         {
             uid: '2',
             name: 'Matt',
             email: 'matt@coffeeshop.com',
+            type: 'personal',
             password: 'placeholder',
             birthday: 'Some time this millennium. God I\'m old',
             favDrink: 'Cappuccinno',
+            rewardPoints: 0,
             joined: new Date()
         },
         {
             uid: '3',
             name: 'Ciaran',
             email: 'ciaran@coffeeshop.com',
+            type: 'personal',
             password: 'wallet',
             birthday: '04/08/89',
             favDrink: 'Flat White',
+            rewardPoints: 0,
+            joined: new Date()
+        },
+        {
+            uid: '4',
+            name: 'NQ Cafe',
+            email: 'supplies@nqcafe.com',
+            type: 'business',
+            password: 'coffeebeans',
             joined: new Date()
         }
 
@@ -42,7 +56,7 @@ const fakeDatabase = {
             name: 'Latte',
             sizes: ['Regular', 'Large'],
             milk: ['Dairy', 'Soya', 'Coconut'],
-            sryups: ['Caramel', 'Vanilla', 'Hazelnut'],
+            syrups: ['Caramel', 'Vanilla', 'Hazelnut'],
             options: ['Dry', 'Regular Foam', 'Wet'],
             price: 2.9
         },
@@ -50,7 +64,7 @@ const fakeDatabase = {
             name: 'Cappuccino',
             sizes: ['Regular', 'Large'],
             milk: ['Dairy', 'Soya', 'Coconut'],
-            sryups: ['Caramel', 'Vanilla', 'Hazelnut'],
+            syrups: ['Caramel', 'Vanilla', 'Hazelnut'],
             options: ['Dry', 'Regular Foam', 'Wet'],
             price: 2.9
         },
@@ -58,7 +72,7 @@ const fakeDatabase = {
             name: 'Americano',
             sizes: ['Regular', 'Large'],
             milk: ['Dairy', 'Soya', 'Coconut'],
-            sryups: ['Caramel', 'Vanilla', 'Hazelnut'],
+            syrups: ['Caramel', 'Vanilla', 'Hazelnut'],
             options: ['Black', 'Splash of milk', 'Milky'],
             price: 2.3
         },
