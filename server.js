@@ -153,11 +153,13 @@ const fakeDatabase = {
                 {
                     name: 'Rwanda Mutova',
                     weight: 1,
+                    quantity: 3,
                     price: 16
                 },
                 {
                     name: 'Colombia Tolima Decaf',
                     weight: 0.5,
+                    quantity: 2,
                     price: 9
                 },
             ]
