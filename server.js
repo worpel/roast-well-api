@@ -16,7 +16,7 @@ const fakeDatabase = {
             password: 'redux',
             birthday: 'Close to mine',
             favDrink: 'Americano',
-            rewardPoints: 0,
+            rewardPoints: 4,
             joined: new Date()
         },
         {
@@ -27,7 +27,7 @@ const fakeDatabase = {
             password: 'placeholder',
             birthday: 'Some time this millennium. God I\'m old',
             favDrink: 'Cappuccinno',
-            rewardPoints: 0,
+            rewardPoints: 7,
             joined: new Date()
         },
         {
@@ -38,7 +38,7 @@ const fakeDatabase = {
             password: 'wallet',
             birthday: '04/08/89',
             favDrink: 'Flat White',
-            rewardPoints: 0,
+            rewardPoints: 3,
             joined: new Date()
         },
         {
