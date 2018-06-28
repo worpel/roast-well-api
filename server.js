@@ -101,6 +101,68 @@ const fakeDatabase = {
             allergens: ['Wheat', 'Egg'],
             price: 3
         },
+    ],
+    history: [
+        {
+            customerId: '1',
+            productsOrdered: [
+                {
+                    name: 'Latte',
+                    size: 'Regular',
+                    price: 2.9
+                },
+                {
+                    name: 'Cappuccino',
+                    size: 'Regular',
+                    price: 2.9
+                },
+            ]
+        },
+        {
+            customerId: '2',
+            productsOrdered: [
+                {
+                    name: 'Cappuccino',
+                    size: 'Large',
+                    price: 3.2
+                },
+                {
+                    name: 'Lemon Doughnut',
+                    price: 3.4
+                },
+            ]
+        },
+        {
+            customerId: '2',
+            productsOrdered: [
+                {
+                    name: 'Cappuccino',
+                    size: 'Large',
+                    price: 3.2
+                },
+                {
+                    name: 'Cappuccino',
+                    size: 'Regular',
+                    price: 2.9
+                },
+            ]
+        },
+        {
+            customerId: '4',
+            productsOrdered: [
+                {
+                    name: 'Rwanda Mutova',
+                    weight: 1,
+                    quantity: 16
+                },
+                {
+                    name: 'Colombia Tolima Decaf',
+                    weight: 0.5,
+                    price: 9
+                },
+            ]
+        },
+        
     ]
 }
 
@@ -118,6 +180,19 @@ app.get('/users/:id', (req, res) => {
         return user.uid === id;
     });
     let isValid = currentUser.length === 0 ? 'User not found' : currentUser;
+    res.send(isValid);
+});
+
+app.get('/history', (req, res) => {
+    res.send(fakeDatabase.history);
+});
+
+app.get('/history/:id', (req, res) => {
+    const {id} = req.params;
+    let currentCustomer = fakeDatabase.history.filter(customer => {
+        return customer.customerId === id;
+    });
+    let isValid = currentCustomer.length === 0 ? 'No history found' : currentCustomer;
     res.send(isValid);
 });
 
